@@ -1,0 +1,25 @@
+.shop-category{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding:50px;
+}
+.shopcategory-indexSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopcategory-sort {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #888;
+}
+.shopcategory-indexSort p span {
+  font-weight: 600;
+}
+.shopcategory-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-self: center;
+}

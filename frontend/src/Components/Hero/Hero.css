@@ -1,0 +1,148 @@
+.hero {
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  display: flex;
+  padding: 50px;
+}
+.hero-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+  line-height: 1.1;
+  padding: 50px 0;
+}
+.hero-left h2 {
+  color: #090909;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 15px;
+}
+.hero-left p {
+  color: #171717;
+  font-size: 70px;
+  font-weight: 600;
+  letter-spacing: 15px;
+}
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.hero-hand-icon img {
+  width: 105px;
+}
+.hero-latest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 310px;
+  height: 70px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background: #ff4141;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.hero-right img {
+    max-width: 100%;
+}
+
+/* Resposive style */
+@media(max-width:1280px){
+  .hero{
+    padding: 30px;
+  }
+  .hero-left{
+    padding:30px 0;
+  }
+  .hero-left h2{
+    font-size: 22px;
+  }
+  .hero-left p{
+    font-size: 60px;
+  }
+  .hero-hand-icon img{
+    width: 80px;
+  }
+  .hero-latest-btn{
+    gap: 10px;
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+@media(max-width:1024px){
+  .hero{
+    padding: 30px;
+  }
+  .hero-left{
+    padding:30px 0;
+  }
+  .hero-left h2{
+    font-size: 22px;
+  }
+  .hero-left p{
+    font-size: 45px;
+  }
+  .hero-hand-icon img{
+    width: 50px;
+  }
+  .hero-latest-btn{
+    gap: 10px;
+    width: 250px;
+    height: 60px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+@media(max-width:800px){
+  .hero{
+    padding: 20px;
+  }
+  .hero-left{
+    flex:2;
+    padding:20px 0;
+  }
+  .hero-left h2{
+    font-size: 18px;
+  }
+  .hero-left p{
+    font-size: 30px;
+  }
+  .hero-hand-icon img{
+    width: 40px;
+  }
+}
+@media(max-width:500px){
+  .hero{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .hero-left{
+    padding:10px 0;
+  }
+  .hero-left h1{
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .hero-left p{
+    font-size: 45px;
+    letter-spacing: normal;
+  }
+  .hero-hand-icon{
+    width:55px;
+  }
+ .hero-right{
+  display: none;
+ }
+}
