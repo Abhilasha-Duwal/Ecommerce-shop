@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/nav-dropdown.png";
 
@@ -11,6 +11,7 @@ const Narbar = () => {
   const [menu, setMenu] = useState("shop");
   const { getTotalCartItems } = useContext(ShopContext);
   const menuRef = useRef();
+  const location = useLocation()
 
   const dropdown_toggle = (e) => {
     menuRef.current.classList.toggle("nav-menu-visible");
@@ -19,12 +20,12 @@ const Narbar = () => {
 
   return (
     <div className="navbar">
-      <div className="nav-logo">
-        <div className="nav-logo-holder">
-          <img src={logo} alt="" />
-        </div>
-        <p>SHOPPER</p>
-      </div>
+      <Link to="/"  style={{ textDecoration: "none" }} className="nav-logo">
+          <div className="nav-logo-holder">
+            <img src={logo} alt="" />
+          </div>
+          <p>SHOPPER</p>
+      </Link>
       <img
         className="nav-dropdown"
         onClick={dropdown_toggle}
@@ -39,8 +40,8 @@ const Narbar = () => {
         >
           <Link style={{ textDecoration: "none" }} to="/">
             Shop
-          </Link>
-          {menu === "shop" ? <hr /> : <></>}
+          </Link> 
+          {menu === "shop" || location.pathname==="/" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
@@ -50,7 +51,7 @@ const Narbar = () => {
           <Link style={{ textDecoration: "none" }} to="/mens">
             Men
           </Link>
-          {menu === "mens" ? <hr /> : <></>}
+          {menu === "mens" && location.pathname==="/mens" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
@@ -60,7 +61,7 @@ const Narbar = () => {
           <Link style={{ textDecoration: "none" }} to="/womens">
             Women
           </Link>
-          {menu === "womens" ? <hr /> : <></>}
+          {menu === "womens" && location.pathname==="/womens" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
@@ -70,7 +71,7 @@ const Narbar = () => {
           <Link style={{ textDecoration: "none" }} to="/kids">
             Kids
           </Link>
-          {menu === "kids" ? <hr /> : <></>}
+          {menu === "kids" && location.pathname==="/kids" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">

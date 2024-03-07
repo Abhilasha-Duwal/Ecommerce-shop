@@ -78,6 +78,9 @@
 .nav-dropdown {
   display: none;
 }
+ul{
+  padding-left: 0;
+}
 
 /* Responsive style */
 @media (max-width: 1280px) {
@@ -142,9 +145,10 @@
     position: absolute;
     background-color: white;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 0;
     top: 70px;
     left: 0;
+    overflow: hidden;
   }
   .nav-menu-visible {
     display: flex;
@@ -171,7 +175,7 @@
   }
   .nav-menu {
     height: 50px;
-    top: 30px;
+    top: 46px;
   }
   .nav-login-cart {
     transform: scale(0.8);
@@ -196,7 +200,7 @@
   }
   .nav-menu {
     height: 50px;
-    top: 30px;
+    top: 35px;
   }
   .nav-login-cart {
     gap: 10px;

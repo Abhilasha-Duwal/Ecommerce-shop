@@ -25,3 +25,10 @@
   border: 1px solid #d0d0d0;
   padding: 20px;
 }
+
+/* Responsive style */
+@media (max-width: 1024px){
+  .descriptionbox{
+    padding: 0 20px;
+  }
+}
